@@ -1,0 +1,45 @@
+Mar 30 17:04:36 hk3 ss-server[28914]: remote recv: Connection reset by peer
+Mar 30 17:05:18 hk3 ss-server[28914]: remote recv: Connection reset by peer
+Mar 30 17:05:28 hk3 ss-server[28914]: remote recv: Connection reset by peer
+Mar 30 17:05:45 hk3 ss-server[28914]: remote recv: Connection reset by peer
+Mar 30 17:05:56 hk3 ss-server[28914]: remote recv: Connection reset by peer
+(以上为正常LOG)
+
+Mar 30 17:07:00 hk3 ss-manager[670]:  2020-03-30 17:07:00 INFO: try to bind interface: 192.168.100.110, port: 16548
+Mar 30 17:07:00 hk3 ss-manager[670]:  2020-03-30 17:07:00 ERROR: bind: Address already in use
+Mar 30 17:07:00 hk3 ss-manager[670]:  2020-03-30 17:07:00 ERROR: Could not bind
+Mar 30 17:07:00 hk3 ss-manager[670]:  2020-03-30 17:07:00 ERROR: port is not available, please check.
+Mar 30 17:07:00 hk3 ss-manager[670]:  2020-03-30 17:07:00 ERROR: add_sendto: Bad file descriptor
+(这里没断）
+
+Mar 30 17:08:58 hk3 ss-server[30296]: remote recv: Connection reset by peer
+Mar 30 17:08:59 hk3 ss-server[30296]: crypto: AEAD: repeat salt detected
+Mar 30 17:08:59 hk3 ss-server[30296]: failed to handshake with 119.118.27.75: authentication error
+Mar 30 17:08:59 hk3 ss-server[30296]: crypto: AEAD: repeat salt detected
+Mar 30 17:08:59 hk3 ss-server[30296]: failed to handshake with 150.255.3.130: authentication error
+(上面的两个验证失败ip都不是我的)
+
+Mar 30 17:09:00 hk3 ss-manager[670]:  2020-03-30 17:09:00 INFO: try to bind interface: 192.168.100.110, port: 16548
+Mar 30 17:09:00 hk3 ss-server[30969]: UDP relay enabled
+Mar 30 17:09:00 hk3 ss-server[30969]: initializing ciphers... aes-256-gcm
+Mar 30 17:09:00 hk3 ss-server[30969]: using nameserver: 9.9.9.9,1.1.1.1,1.0.0.1
+Mar 30 17:09:00 hk3 ss-server[30969]: tcp server listening at 192.168.100.110:16548
+Mar 30 17:09:00 hk3 ss-server[30969]: udp server listening at 192.168.100.110:16548
+Mar 30 17:09:21 hk3 ss-server[30296]: crypto: AEAD: repeat salt detected
+(这里开始断了)
+
+Mar 30 17:09:21 hk3 ss-server[30296]: failed to handshake with 122.96.131.50: authentication error
+Mar 30 17:10:00 hk3 ss-manager[670]:  2020-03-30 17:10:00 INFO: try to bind interface: 192.168.100.110, port: 16548
+Mar 30 17:10:00 hk3 ss-server[31169]: UDP relay enabled
+Mar 30 17:10:00 hk3 ss-server[31169]: initializing ciphers... aes-256-gcm
+Mar 30 17:10:00 hk3 ss-server[31169]: using nameserver: 9.9.9.9,1.1.1.1,1.0.0.1
+Mar 30 17:10:00 hk3 ss-server[31169]: tcp server listening at 192.168.100.110:16548
+Mar 30 17:10:00 hk3 ss-server[31169]: udp server listening at 192.168.100.110:16548
+(这一分钟内都没连上)
+
+Mar 30 17:10:31 hk3 ss-server[30296]: crypto: AEAD: repeat salt detected
+Mar 30 17:10:31 hk3 ss-server[30296]: failed to handshake with 175.184.164.57: authentication error
+Mar 30 17:10:36 hk3 ss-server[30296]: remote recv: Connection reset by peer
+Mar 30 17:10:37 hk3 ss-server[30296]: remote recv: Connection reset by peer
+Mar 30 17:10:48 hk3 ss-server[30296]: remote recv: Connection reset by peer
+(又开始正常LOG)
